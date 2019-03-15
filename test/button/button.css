@@ -1,0 +1,24 @@
+button
+	{
+		background-color:#ff8888;
+		color:white;
+		padding:10px;
+		font-size:20px;
+		margin:50px;
+		border:1px solid black;
+		border-radius:4px;
+	}
+	#b1
+	{
+		background-color:#ffff88;
+		color:#00bbff;
+	}
+	button.even
+	{
+		background-color:#ffff88;
+		color:#00bbff;
+	}
+	#b7
+	{
+		background-color:#ccbbff;
+	}
