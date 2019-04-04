@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Design</title>
+<style>
+body 
+{
+  margin: 0px; 
+}
+.top
+{
+    position: static;
+	background-color:#FFA07A;
+    border: 10px  ;
+	height:38.5px;
+	font-size:20px;
+}
+.top a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  border: none;
+  text-decoration: none;
+}
+
+.left
+{
+	position: fixed;
+	width:20px;
+	height:1000px;
+	background:	#FFE5B4;
+	position: fixed;
+    margin: 0px;
+    padding: 10px 5px;
+	transition: width 0.5s;
+}
+.left a 
+{
+  color: White;
+  text-decoration: none;
+}
+.left li, .left ul 
+{
+  list-style-type: none;
+  margin: 5px 10px;
+  padding: 5px;
+}
+.left a:hover 
+{
+  color: Black;
+}
+
+.left:hover
+{
+	width:120px;
+}
+.dropbtn {
+    background-color: #FFA07A;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown 
+{
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+	background-color:#FFE5B4;
+}
+
+.dropdown:hover 
+.dropdown-content 
+{
+    display: block;
+}
+
+.dropdown:hover .dropbtn,.top a:hover 
+{
+    background-color: #FFE5B4;
+}
+	
+</style>
+</head>
+<body>
+	
+<div class="dropdown" style="float:right;">
+	  <button class="dropbtn">Menu</button>
+	  <div class="dropdown-content">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+	  </div>
+</div>
+	
+<div class="top">
+<a href="#news">Home</a>
+<a href="#news">List</a>
+</div>
+	
+<div class="left">
+ <ul>
+	 <li><a href="#">A</a></li>
+	 <li><a href="#">B</a></li>
+	 <li><a href="#">C</a></li>
+	 <li><a href="#">D</a></li>
+	 <li><a href="#">E</a></li>
+ </ul>
+</div>
+	
+</body>
+</html>
