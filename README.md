@@ -7,4 +7,4 @@
 教師 | 陳鍾誠
 學校 | 金門大學
 科系 | 資訊工程系
-說明 | [blog](readme.md)
+說明 | [blog](README.md)
