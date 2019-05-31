@@ -5,37 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-    font-family: "Lato",sans-serif;
-    margin:0;
-    background-color:white;
+  font-family: "Lato",sans-serif;
+  margin:0;
+  background-color:white;
 }
 .container{
-    background-color:pink;
-    height:25px;
-    color:white;
-  
-}
+  background-color:pink;
+  height:25px;
+  color:white;  
+  }
 .container a{
-    float:right;
-    text-decoration:none;
-    color:white;
+  float:right;
+  text-decoration:none;
+  color:white;
 }
-.t{
+  .big{
+    width:1050px;
+  }  
+.pic{
+  float:left;
     margin:30px;
-    top:80px;
-    left:230px;
-    width:380px;
-    height:380px;
+    width:450px;
+    height:450px;
     position:relative;
-    overflow:hidden;  
+    overflow:hidden;
   }
-.t img{
+  .pic2{
+  float:right;
+    margin:30px;
+    width:450px;
+    height:450px;
+    position:relative;
+    overflow:hidden;
+  }
+.pic img,.pic2 img{
+   left:0px;
     position:absolute;
     width:100%;
     height:100%;
-
   }
-.block{
+
+.block,.block2{
     position:absolute;
     width:100%;
     height:90px;
@@ -47,95 +57,49 @@ body {
     bottom:-100px;
     transition:1s;
     font-size:23px;
-  
-    
 }
-.block a{
-    font-size:15px;
-    color:gray;
-  }
- .block a:hover{
-    cursor: pointer;
-  }
-.t:hover .block{
+.pic:hover .block,.pic2:hover .block2{
     bottom:0;
   }
-  
-  
-  
-.me{
-    margin:30px;
-    top:-363px;
-    left:800px;
-    width:390px;
-    height:385px;
-    position:relative;
-    overflow:hidden;  
-  }
-.me img{
-    position:absolute;
-    width:100%;
-    height:100%;
 
-  }
-.meme{
-    position:absolute;
-    width:100%;
-    height:90px;
-    font-family:Black Italic;
-    background-color:pink;
-    color:white;
-    line-height:90px;
-    text-align:center;
-    bottom:-100px;
-    transition:1s;
-    font-size:23px;
-  
-    
-}
-.meme a{
+.block a,.block2 a{
     font-size:15px;
     color:gray;
   }
- .meme a:hover{
-    cursor: pointer;
-  }
-.me:hover .meme{
-    bottom:0;
-  }
+
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    float:left;
-    background-color: pink;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  float:left;
+  background-color: pink;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: black;
-    display: block;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: black;
+  display: block;
 }
 
 .sidenav a:hover {
-    color: white;
+  color: white;
 }
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 #main,#a,#b{
-    transition: margin-left .5s;
-    padding: 16px;
+  transition: margin-left .5s;
+  padding: 16px;
 }
 
 </style>
@@ -155,31 +119,36 @@ body {
   <span style="font-size:20px;cursor:pointer" onclick="openNav()"> &#9776;</span>
 </div>
   
-<div id="a" class="t"><img src="image/4.jpg" alt="">
-  <div class="block">Hi ~ Welcome to my blog!
-    <a href="#">(Learn More)</a></div> 
+<center><div id="a" class="big">
+  <div class="pic">
+  <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg">
+  <div class="block">Hi ~ Welcome to my blog....
+    <a href="#">(Learn More)</a></div>
   </div>
+  <div class="pic2">
+    <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg">
+    <div class="block2">This is my favorite singer....
+      <a href="#">(Learn More)</a></div>
+    </div>
+  </div></center>
 
-<div id="b" class="me"><img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg" alt="">
-    <div class="meme">my favorite singer....
-    <a href="#">(Learn More)</a></div> 
+  
+  
 <script>
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "240px";
   document.getElementById("main").style.marginLeft = "250px";
   document.getElementById("a").style.marginLeft = "250px";
-  document.getElementById("b").style.marginLeft = "250px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   document.getElementById("a").style.marginLeft= "0";
-  document.getElementById("b").style.marginLeft= "0";
-}
-</script>
-   
+}</script>
+  
+
+
 </body>
 </html> 
 
