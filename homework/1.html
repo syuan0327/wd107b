@@ -29,27 +29,22 @@ body {
   color:white;
 }
 .pic{
-    float:left;
-    top:70px;
-    left:100px;
-    margin:30px;
-    width:300px;
-    height:300px;
+    top:30px;
+    width:380px;
+    height:380px;
     position:relative;
     overflow:hidden;
   }
    .pic2{
-    float:right;
     top:70px;
-    right:100px;
-    margin:30px;
-    width:300px;
-    height:300px;
+    margin:10px;
+    width:380px;
+    height:380px;
     position:relative;
     overflow:hidden;
   }
 .pic img,.pic2 img{
-   
+  left:16px;
     position:absolute;
     width:100%;
     height:100%;
@@ -108,7 +103,7 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-#main{
+#main,#a,#b{
   transition: margin-left .5s;
   padding: 16px;
 }
@@ -130,7 +125,7 @@ body {
   <span style="font-size:20px;cursor:pointer" onclick="openNav()"> &#9776;</span>
 </div>
 
-
+<center>
   <div id="a"  class="pic">
   <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg" >
   <div class="block">Hi ~ Welcome to my blog...
@@ -142,7 +137,7 @@ body {
     <div class="block2">This is my favorite singer...
       <a href="#">(Learn More)</a></div>
     </div>
-  
+</center>  
 
 
   
@@ -151,12 +146,16 @@ body {
 function openNav() {
   document.getElementById("mySidenav").style.width = "240px";
   document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("a").style.marginLeft = "250px";
+  document.getElementById("b").style.marginLeft = "250px";
 
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+    document.getElementById("a").style.marginLeft= "0";
+    document.getElementById("b").style.marginLeft= "0";
 }</script>
   
 
