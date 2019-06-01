@@ -13,7 +13,7 @@ body {
   padding:0;
   width:100%;
   background-color:white;
-  min-width:1200px;
+  min-width:480px;
 }
 
 .container{
@@ -29,30 +29,28 @@ body {
   text-decoration:none;
   color:white;
 }
-
-   .big{
-    width:1090px;
-    
-  }  
 .pic{
     float:left;
+    top:70px;
+    left:100px;
     margin:30px;
-    width:450px;
-    height:450px;
+    width:400px;
+    height:400px;
     position:relative;
     overflow:hidden;
   }
   .pic2{
-  float:right;
+    float:right;
+    top:70px;
+    right:100px;
     margin:30px;
-    width:450px;
-    height:450px;
+    width:400px;
+    height:400px;
     position:relative;
     overflow:hidden;
   }
 .pic img,.pic2 img{
    
-    left:0px;
     position:absolute;
     width:100%;
     height:100%;
@@ -61,11 +59,11 @@ body {
 .block,.block2{
     position:absolute;
     width:100%;
-    height:90px;
+    height:80px;
     font-family:Black Italic;
     background-color:pink;
     color:white;
-    line-height:90px;
+    line-height:80px;
     text-align:center;
     bottom:-100px;
     transition:1s;
@@ -130,20 +128,21 @@ body {
   <a href="#">&#9733;</a>
   <span style="font-size:20px;cursor:pointer" onclick="openNav()"> &#9776;</span>
 </div>
-  <br></br>
-  <br></br>
-<center><div id="a" class="big">
-  <div class="pic">
+
+
+  <div id="a"  class="pic">
   <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg">
   <div class="block">Hi ~ Welcome to my blog....
     <a href="#">(Learn More)</a></div>
   </div>
-  <div class="pic2">
+  
+  <div id="b" class="pic2">
     <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg">
     <div class="block2">This is my favorite singer....
       <a href="#">(Learn More)</a></div>
     </div>
-  </div></center>
+  
+
 
   
   
@@ -152,17 +151,17 @@ function openNav() {
   document.getElementById("mySidenav").style.width = "240px";
   document.getElementById("main").style.marginLeft = "250px";
   document.getElementById("a").style.marginLeft = "250px";
+  document.getElementById("b").style.marginLeft = "250px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   document.getElementById("a").style.marginLeft= "0";
+  document.getElementById("b").style.marginLeft= "0";
 }</script>
   
 
 
 </body>
 </html> 
-
-</html>
