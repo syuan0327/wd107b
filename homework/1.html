@@ -28,23 +28,17 @@ body {
   text-decoration:none;
   color:white;
 }
-.pic{
+
+.pic,.pic2{
     top:30px;
-    width:200px;
-    height:200px;
+    width:350px;
+    height:350px;
     position:relative;
     overflow:hidden;
   }
-   .pic2{
-    top:70px;
-    margin:10px;
-    width:200px;
-    height:200px;
-    position:relative;
-    overflow:hidden;
-  }
+
 .pic img,.pic2 img{
-  left:16px;
+    left:0px;
     position:absolute;
     width:100%;
     height:100%;
@@ -103,7 +97,7 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-#main,#a,#b{
+#main,#a{
   transition: margin-left .5s;
   padding: 16px;
 }
@@ -126,18 +120,26 @@ body {
 </div>
 
 <center>
-  <div id="a"  class="pic">
+<div id="a" class="big">
+<div   class="pic">
   <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg" >
   <div class="block">Hi ~ Welcome to my blog...
     <a href="#">(Learn More)</a></div>
-  </div>
-  
-  <div id="b" class="pic2">
+</div>  
+  <br></br>
+<div class="pic2">
     <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg" >
     <div class="block2">This is my favorite singer...
       <a href="#">(Learn More)</a></div>
-    </div>
-</center>  
+</div>
+   <br></br>
+<div  class="pic2">
+    <img src="https://pbs.twimg.com/media/D5DxnVxUYAUXy9o.jpg" >
+    <div class="block2">This is my favorite singer...
+      <a href="#">(Learn More)</a></div>
+</div>
+  </div>
+</center> 
 
 
   
@@ -147,7 +149,6 @@ function openNav() {
   document.getElementById("mySidenav").style.width = "240px";
   document.getElementById("main").style.marginLeft = "250px";
   document.getElementById("a").style.marginLeft = "250px";
-  document.getElementById("b").style.marginLeft = "250px";
 
 }
 
@@ -155,7 +156,6 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
     document.getElementById("a").style.marginLeft= "0";
-    document.getElementById("b").style.marginLeft= "0";
 }</script>
   
 
