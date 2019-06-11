@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>範例 -- 手寫板</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.js">
+  </script>
+  <script>
+      var p_color = "#9999FF";
+      var p_width = 3;
+      $(function () {
+          //取得canvas context
+          var $canvas = $("#cSketchPad");//必要的JQuery
+          var ctx = $canvas[0].getContext("2d");//必要的,JQuery
+          ctx.lineCap = "round";//畫出來的形狀
+          ctx.fillStyle = "white"; //整個canvas塗上白色背景避免PNG的透明底色效果
+          ctx.fillRect(0,0, $canvas.width(), $canvas.height());
+          var drawMode = false;
+          //canvas點選、移動、放開按鍵事件時進行繪圖動作
+          $canvas.mousedown(function (e) {
+              ctx.beginPath();
+              ctx.strokeStyle = p_color;
+              ctx.lineWidth = p_width;
+              ctx.moveTo(e.pageX - $canvas.position().left, e.pageY - $canvas.position().top);
+              drawMode = true;
+          })
+          .mousemove(function (e) {
+              if (drawMode) {
+                  ctx.lineTo(e.pageX - $canvas.position().left, e.pageY - $canvas.position().top);
+                  ctx.stroke();
+              }
+          })
+          .mouseup(function (e) {
+              drawMode = false;
+          });
+      });
+  </script>
+
+  
+<style>
+    body {
+      margin:0;
+      padding:0;
+      width:100%;
+      height:1300px;
+      background-color:lavender;
+      min-width:800px;
+      }
+    .container{
+      background-color:#CCBBFF;
+      height:25px;
+      color:white;
+      margin:0;
+      min-width:900px;
+      
+      }
+      .me{
+        width:900px;
+        height:350px;
+        margin:100px;
+      }
+  .me img{
+    float:left;
+  }
+      #cSketchPad{
+        position:absolute;
+        top:700px;
+        left:500px;
+      }
+  .c{
+         background-color:#9999FF;
+        width:360px;
+        font-size:20px;
+      }
+      .hi
+      {
+        background-color:white;
+        float:right;
+        font-family:Black Italic;
+        font-size:28px;
+        margin:50px;
+        height:230px;
+        width:360px;
+      }
+      .i{
+        background-color:white;
+        font-family:cursive;
+        position:relative;
+        left:270px;
+        font-size: 23px;
+        top:-160px;
+        width:190px;
+        text-align:center;
+        z-index:1;
+      }
+      .back{
+        background-color:white;
+        font-family:cursive;
+        position:absolute;
+        left:530px;
+        top:620px;
+        width:260px;
+        
+      }
+  
+    .sidenav {
+      height: 1200px;
+      width: 0;
+      position: absolute;
+      z-index: 1;
+      float:left;
+      background-color: #9F88FF;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      z-index:2;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+    
+    .sidenav a:hover {
+      color:lavender;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    #main,#a,#b{
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+    </style>
+</head>
+
+<body>
+
+ <div id="dCanvas" >
+  <canvas id="cSketchPad" width="400" height="400" style="border: 2px solid gray"/>
+ </div>
+
+ <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">ME!</a>
+        <a href="#">Taylor Swift</a>
+        <a href="#">My Friends</a>
+        <a href="#">hi</a>
+      </div>
+      
+      <div id="main" class="container">
+        <span style="font-size:20px;cursor:pointer" onclick="openNav()"> &#9776;</span>  
+      </div>
+        
+ <center><div id="a" class="me"> 
+        <img src="https://instagram.fkhh1-2.fna.fbcdn.net/vp/2bd7886a425a63a7f24f9230115a1660/5D9003DD/t51.2885-19/s320x320/61336673_441764666653887_5545145977087721472_n.jpg?_nc_ht=instagram.fkhh1-2.fna.fbcdn.net">
+         
+           <div class="hi">Hi ~ Welcome to my blog &#127804;<br>
+            <p><font size="5" >
+              Name：鍾瑄<br>
+              Birth：2000/03/27<br>
+              IG：<a href="https://www.instagram.com/syuan0327/?hl=zh-tw"><i class="fab fa-instagram"></i><a/><br>
+              E-mail：<a href="mailto:syuan.jhong1989@gmail.com"><i class="far fa-envelope"></i></a>
+              </font></p>
+              <div class="c">Nice to meet you ! ☺</div>
+            </div> 
+        </div>
+        </center>
+        <div class="i">This is me </div>
+        <div class="back">There is a sketchpad<br>
+          You can draw yourself on it ⮯
+        </div>
+        
+        
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "240px";
+        document.getElementById("main").style.marginLeft = "250px";
+        
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }</script>
+      
+</body>
+</html>
