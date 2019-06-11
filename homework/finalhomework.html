@@ -1,112 +1,44 @@
-
-<!DOCTYPE HTML>
-<!--
-	Epilogue by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>♥ Dian</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	</head>
-	<body>
-
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="inner">
-					<h1>Welcome</h1>
-					<p>一個因興趣而開始寫心得的孩子</p>
-				</div>
-			</header>
-
-		<!-- Wrapper -->
-		<div>
-			<a href="#" class="button1 fix" >Top ↑</a>
-			<img class = "fix1"src="images/bill.gif" width="150" height="165">
-			<img class = "fix5"src="images/billouo.gif" width="104" height="240">
-		</div>
-			<div id="wrapper">
-
-				<!-- Banner -->
-					<section id="intro" class="main">
-						<span class="fa fa-chess-queen fa-2x"></span>
-						<h2>我是廖曼伶</h2>
-						<img src="images/mew.jpg" width="300" height="300">
-						<p >1998 . 10 . 22 <a href="https://wallpaperwire.com/wp-content/uploads/2018/03/Gravity-Falls-Bill-Cipher-Wallpaper-15.jpg">▲</a><br></p>
-						<hr>
-						<p style = "font-size : 14px">我沒想到的是，寫出來的網頁原來能這麼漂亮。</p>
-						
-					</section>
-
-				<!-- Items -->
-					<section class="main items">
-						<article class="item">
-							<header>
-								<a href="adventuretime.html"><img src="images/jake.jpg" alt="" /></a>
-								<h3>AdventureTime</h3>
-							</header>
-							<p>A story abouat a human boy with a magical dog .</p>
-							<ul class="actions">
-								<li><a href="adventuretime.html" class="button">More</a></li>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="GravityFalls.html"><img src="images/gravity.jpg" alt="" /></a>
-								<h3>Gravity Falls</h3>
-							</header>
-							<p>A story abouat an area atract mystery .</p>
-							<ul class="actions">
-								<li><a href="GravityFalls.html" class="button">More</a></li>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="StevenUniverse.html"><img src="images/steven.png" alt="" /></a>
-								<h3>Steven Universe</h3>
-							</header>
-							<p>A little boy who is blend of crystal gem and human being is named Steven .</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</article>
-					</section>
-
-				<!-- CTA -->
-					
-
-				<!-- Main -->
-				<!--
-					<section id="main" class="main">
-						<header>
-							<h2>Lorem ipsum dolor</h2>
-						</header>
-						<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-					</section>
-				-->
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/xiang.s.jue.165" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/whatdian/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="mailto:nice3369124@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a></p>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <title>範例 -- 手寫板</title>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.js">
+  </script>
+  <script>
+      var p_color = "black";
+      var p_width = 3;
+      $(function () {
+          //取得canvas context
+          var $canvas = $("#cSketchPad");//必要的JQuery
+          var ctx = $canvas[0].getContext("2d");//必要的,JQuery
+          ctx.lineCap = "round";//畫出來的形狀
+          ctx.fillStyle = "white"; //整個canvas塗上白色背景避免PNG的透明底色效果
+          ctx.fillRect(0, 0, $canvas.width(), $canvas.height());
+          var drawMode = false;
+          //canvas點選、移動、放開按鍵事件時進行繪圖動作
+          $canvas.mousedown(function (e) {
+              ctx.beginPath();
+              ctx.strokeStyle = p_color;
+              ctx.lineWidth = p_width;
+              ctx.moveTo(e.pageX - $canvas.position().left, e.pageY - $canvas.position().top);
+              drawMode = true;
+          })
+          .mousemove(function (e) {
+              if (drawMode) {
+                  ctx.lineTo(e.pageX - $canvas.position().left, e.pageY - $canvas.position().top);
+                  ctx.stroke();
+              }
+          })
+          .mouseup(function (e) {
+              drawMode = false;
+          });
+      });
+  </script>
+</head>
+<body>
+ <div id="dCanvas">
+  <canvas id="cSketchPad" width="300" height="300" style="border: 2px solid gray" />
+ </div>
+</body>
 </html>
