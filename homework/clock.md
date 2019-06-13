@@ -3,7 +3,9 @@
 ##說明
 1.簡易的小時鐘
 2.可顯示出現在的時間
+
 ##技術手段
+
 1.使用<body onload="showTime()">來顯示時間
 2.使用var today=new Date();
     var h=today.getHours();
