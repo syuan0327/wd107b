@@ -5,13 +5,17 @@
 
 2.可顯示出現在的時間
 
-## 技術手段
-1.使用body onload="showTime()"來顯示時間
+## 技術手段來顯示時間
+1.使用此
 
-2.  
+     <body onload="showTime()">
+
+2.取得時間用  
 
     var today=new Date();var h=today.getHours();
     
     var m=today.getMinutes();var s=today.getSeconds();
     
-    取得時間後用document.getElementById('time').innerHTML = h+":"+m+":"+s;設定顯示的樣子
+3.取得時間後用此來設定顯示的樣子
+    
+    document.getElementById('time').innerHTML = h+":"+m+":"+s;
