@@ -8,8 +8,7 @@
 ## 技術手段
 1.使用body onload="showTime()"來顯示時間
  
-2.  
-    var today=new Date();
+2.  var today=new Date();
 
     var h=today.getHours();
     
