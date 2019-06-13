@@ -2,10 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ME!</title>
+  <title>範例 -- 手寫板</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <link rel="shortcut icon" href="image/b.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  
   
@@ -30,36 +29,40 @@
         position:relative;
         top:190px;
         width:900px;
-        height:350px;
+        height:100px;
        
       }
   .me img{
-    float:left;
+    position:relative;
+    left:-250px;
   }
   .time{
        position:relative;
     top:280px;
     top:18px;
-    left:199px;
+    left:250px;
     z-index:1;
   }
       
   #cSketchPad{
-float:right;
+     position:relative;
+        left:-250px;
+        top:550px;
       }
   .c{
      background-color:#9999FF;
-        width:350px;
-        font-size:20px;
-    position:relative;
-    top:358px;left:-280px;
+     width:350px;
+     font-size:20px;
+     position:relative;
+     top:-380px;
+    left:280px;
         }
       .hi
       {
         background-color:white;
          position:relative;
-        left:-280px;
-        top:379px;
+        left:280px;
+        top:-360px;
         font-family:Black Italic;
         font-size:28px;
         height:230px;
@@ -71,7 +74,7 @@ float:right;
         font-family:cursive;
         font-size: 23px;
          position:relative;
-        top:300px;
+        top:-19px;
         left:-200px;
         width:190px;
         text-align:center;
@@ -81,9 +84,11 @@ float:right;
         
         font-family:cursive;
         position:relative;
-        left:260px;
+        left:-250px;
+        top:50px;
         height:70px;
         width:260px;
+        z-index:1;
         
       }
   .container a{
@@ -131,8 +136,8 @@ float:right;
 
  <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="https://syuan0327.github.io/wd107b/homework/2.html">ME!</a>
-        <a href="https://www.taylorswift.com/">Taylor Swift</a>
+        <a href="#">ME!</a>
+        <a href="#">Taylor Swift</a>
         <a href="#">My Friends</a>
         <a href="#">hi</a>
       </div>
@@ -146,11 +151,7 @@ float:right;
         <img src="https://instagram.fkhh1-2.fna.fbcdn.net/vp/2bd7886a425a63a7f24f9230115a1660/5D9003DD/t51.2885-19/s320x320/61336673_441764666653887_5545145977087721472_n.jpg?_nc_ht=instagram.fkhh1-2.fna.fbcdn.net">
           <div class="i">This is me </div>
  <div class="back">There is a sketchpad,you can draw yourself on it ⮯</div>
-    <div id="dCanvas" >
-  <canvas id="cSketchPad" width="400" height="400" style="border: 2px solid gray"/>
- </div>
-    
-   <font size="4" ><div class="hi">Hi ~ Welcome to my blog &#127804;<br></font>
+            <font size="4" ><div class="hi">Hi ~ Welcome to my blog &#127804;<br></font>
             <font size="4" >
               Name：鍾瑄<br>
               Birth：2000/03/27<br>
@@ -161,12 +162,13 @@ float:right;
               <div id="time" class="time" style="font-size:20px;"></div>
               
             </div>  
- <div class="c">Nice to meet you ! ☺</div>
+         <div class="c">Nice to meet you ! ☺</div>
         </div>
         </center>
-        
   
-
+ <center> <div id="dCanvas" >
+  <canvas id="cSketchPad" width="400" height="400" style="border: 2px solid gray"/></div><center>
+  
     
       <script>
       function openNav() {
