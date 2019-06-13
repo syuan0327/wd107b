@@ -2,7 +2,7 @@
 
 ## 1. 小時鐘
 
-連結：[clock](clock)
+連結：[clock](clock.md)
 
 ## 2. 小畫板
 
